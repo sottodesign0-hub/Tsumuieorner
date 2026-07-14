@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tsumuie（ツムイエ）｜空き家・空家活用の無料相談【大阪・神戸・関西】相続した実家も</title>
+  <meta name="description" content="空家活用・空き家の相続でお悩みなら「Tsumuie（ツムイエ）」。賃貸として活用しながら10〜15年後に事前に合意した条件で入居者へ引き継ぐ新しい仕組みです。大阪・神戸をはじめ関西エリア対応、オンライン相談OK。運営：株式会社SOTTO。無料相談受付中。">
+  <meta name="keywords" content="Tsumuie,ツムイエ,空き家,空家,空家活用,空家活用 神戸,空家 大阪,空家 相続,株式会社SOTTO,SOTTO">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sottodesign0-hub.github.io/Tsumuieorner/">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tsumuie（ツムイエ）">
+  <meta property="og:title" content="Tsumuie（ツムイエ）｜空き家・空家活用の無料相談【大阪・神戸・関西】">
+  <meta property="og:description" content="空家活用・空き家の相続でお悩みなら「Tsumuie」。10〜15年後に事前に合意した条件で入居者へ引き継ぐ新しい仕組み。大阪・神戸をはじめ関西エリア対応。運営：株式会社SOTTO。">
+  <meta property="og:url" content="https://sottodesign0-hub.github.io/Tsumuieorner/">
+  <meta property="og:image" content="https://sottodesign0-hub.github.io/Tsumuieorner/data/Tsumuie2.png">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tsumuie（ツムイエ）｜空き家・空家活用の無料相談【大阪・神戸・関西】">
+  <meta name="twitter:description" content="空家活用・空き家の相続でお悩みなら「Tsumuie」。大阪・神戸をはじめ関西エリア対応、無料相談受付中。">
+  <meta name="twitter:image" content="https://sottodesign0-hub.github.io/Tsumuieorner/data/Tsumuie2.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="data/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="data/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="data/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=M+PLUS+Rounded+1c:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:     #2bbfad;
+      --green-lt:  #4dd0c0;
+      --green-bg:  #edfaf8;
+      --beige:     #f5f0e8;
+      --brown:     #f5831a;
+      --brown-dk:  #1c1a17;
+      --text:      #1c1a17;
+      --text-sub:  #5c5850;
+      --white:     #ffffff;
+      --border:    #e2ddd6;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    .br-mobile { display: none; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER（Tsumuieプラットフォームと共通） ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      height: 58px; display: flex; align-items: center;
+      padding: 0 4%; gap: 2rem;
+    }
+    .h-logo { display: flex; align-items: center; text-decoration: none; color: var(--brown-dk); flex-shrink: 0; }
+    .h-logo img { height: 34px; width: auto; display: block; }
+    .h-nav { display: flex; gap: 0; list-style: none; flex: 1; }
+    .h-nav a {
+      display: block; padding: 0 .95rem; height: 58px;
+      line-height: 58px; font-size: .8rem; font-weight: 500;
+      text-decoration: none; color: var(--text-sub);
+      border-bottom: 2px solid transparent;
+      transition: color .2s, border-color .2s; white-space: nowrap;
+    }
+    .h-nav a:hover { color: var(--brown-dk); }
+    .h-nav a.owner-link { color: var(--brown); border-bottom-color: var(--brown); }
+    .h-cta-line {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: #06C755; color: #fff;
+      font-size: .78rem; font-weight: 700;
+      padding: .38rem .95rem; border-radius: 999px;
+      text-decoration: none; flex-shrink: 0; transition: opacity .2s;
+    }
+    .h-cta-line:hover { opacity: .85; }
+    .h-ham {
+      display: flex; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px; flex-shrink: 0;
+    }
+    .h-ham span { display: block; width: 22px; height: 1.5px; background: var(--brown-dk); transition: all .3s; }
+    .h-ham.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .h-ham.open span:nth-child(2) { opacity: 0; }
+    .h-ham.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mob-menu {
+      display: none; position: fixed; top: 58px; left: 0; right: 0; z-index: 190;
+      background: var(--white); border-bottom: 1px solid var(--border);
+      padding: 1rem 4%; flex-direction: column;
+    }
+    .mob-menu.open { display: flex; }
+    .mob-menu a { padding: .85rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--brown-dk); font-size: .92rem; }
+    .mob-menu a:last-child { border-bottom: none; color: var(--brown); font-weight: 700; }
+    @media (max-width: 768px) {
+      .h-nav { display: none; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--green-bg);
+      display: flex; align-items: center;
+      padding: 80px 5%;
+    }
+    .hero-inner { max-width: 680px; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--green); color: var(--white);
+      font-size: .78rem; font-weight: 500; letter-spacing: .08em;
+      padding: .3rem .9rem; border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+      font-weight: 600; line-height: 1.4;
+      color: var(--brown-dk);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em { color: var(--green); font-style: normal; }
+    .hero p {
+      font-size: 1.05rem; color: var(--text-sub);
+      margin-bottom: 1.2rem; max-width: 460px;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--green); color: var(--white);
+      padding: .85rem 2rem; border-radius: 32px;
+      text-decoration: none; font-size: 1rem; font-weight: 500;
+      box-shadow: 0 4px 16px rgba(74,124,89,.3);
+      transition: all .25s;
+    }
+    .btn-primary:hover { background: var(--green-lt); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(74,124,89,.35); }
+    .btn-outline {
+      border: 1.5px solid var(--green); color: var(--green);
+      padding: .85rem 2rem; border-radius: 32px;
+      text-decoration: none; font-size: 1rem; font-weight: 500;
+      transition: all .25s;
+    }
+    .btn-outline:hover { background: var(--green-bg); }
+
+    /* ── SECTION BASE ── */
+    section { padding: 80px 5%; }
+    .logo-inline {
+      height: 1.4em; width: auto;
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0 3px -3px;
+    }
+    .t-logo {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700; font-style: normal;
+      display: inline;
+    }
+    .t-logo .t1 { color: var(--green); }
+    .t-logo .t2 { color: var(--brown); }
+    /* 白背景用（ダーク背景上では別途上書き） */
+    .on-dark .t-logo .t1 { color: #5df0df; }
+    .on-dark .t-logo .t2 { color: #ffb066; }
+
+    .section-label {
+      font-size: .78rem; font-weight: 700; letter-spacing: .14em;
+      color: var(--green); text-transform: uppercase;
+      margin-bottom: .6rem;
+    }
+    .section-label .logo-inline {
+      height: 1.6em; margin-bottom: -4px;
+    }
+    .section-title {
+      font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 600; color: var(--brown-dk);
+      line-height: 1.5; margin-bottom: 1rem;
+    }
+    .section-desc { color: var(--text-sub); max-width: 560px; }
+    .center { text-align: center; }
+    .center .section-desc { margin: 0 auto; }
+
+    /* ── PAIN ── */
+    .pain { background: var(--beige); }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem; margin-top: 2.5rem;
+    }
+    .pain-card {
+      background: var(--white); border-radius: 16px;
+      padding: 1.75rem; border: 1px solid var(--border);
+    }
+    .pain-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--green-bg);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .pain-icon svg { width: 26px; height: 26px; }
+    .pain-card h3 { font-size: 1rem; font-weight: 700; color: var(--brown-dk); margin-bottom: .5rem; }
+    .pain-card p { font-size: .875rem; color: var(--text-sub); }
+
+    /* ── ABOUT ── */
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+    }
+    .about-img {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.1);
+    }
+    .about-img img { width: 100%; display: block; }
+    .about-text .section-title { margin-bottom: .8rem; }
+    .about-text p { color: var(--text-sub); margin-bottom: 1rem; }
+    .tag-row { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.5rem; justify-content: center; }
+    .tag {
+      background: var(--green-bg); color: var(--green);
+      font-size: .8rem; font-weight: 500; padding: .35rem .9rem;
+      border-radius: 20px; border: 1px solid rgba(74,124,89,.2);
+    }
+
+    /* ── HOW ── */
+    .how { background: var(--green-bg); }
+    .steps {
+      display: flex; flex-direction: column; gap: 2rem;
+      margin-top: 3rem; max-width: 720px; margin-left: auto; margin-right: auto;
+    }
+    .step {
+      display: flex; gap: 1.5rem; align-items: flex-start;
+      background: var(--white); border-radius: 16px;
+      padding: 1.75rem; border: 1px solid var(--border);
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--green); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      font-size: 1.1rem; font-weight: 600;
+    }
+    .step-body h3 { font-size: 1rem; font-weight: 700; color: var(--brown-dk); margin-bottom: .4rem; }
+    .step-body p { font-size: .875rem; color: var(--text-sub); }
+
+    /* ── BENEFITS ── */
+    .benefits-grid {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1.5rem; margin-top: 2.5rem;
+      max-width: 960px; margin-left: auto; margin-right: auto;
+    }
+    .benefit-card {
+      flex: 1 1 280px; max-width: 300px;
+      border-radius: 20px; padding: 2rem;
+      border: 1.5px solid var(--border);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .benefit-icon {
+      width: 56px; height: 56px; border-radius: 16px;
+      background: var(--green-bg);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+    .benefit-icon svg { width: 28px; height: 28px; }
+    .benefit-card h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--brown-dk); margin-bottom: .6rem;
+    }
+    .benefit-card p { font-size: .875rem; color: var(--text-sub); }
+
+    /* ── VOICE ── */
+    .voice { background: var(--beige); }
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-top: 2.5rem;
+    }
+    .voice-card {
+      background: var(--white); border-radius: 16px;
+      padding: 1.75rem; border: 1px solid var(--border);
+      position: relative;
+    }
+    .voice-card::before {
+      content: '"';
+      font-family: Georgia, serif; font-size: 5rem;
+      color: var(--green); opacity: .15;
+      position: absolute; top: -10px; left: 16px;
+      line-height: 1;
+    }
+    .voice-text { font-size: .9rem; color: var(--text); margin-bottom: 1rem; line-height: 1.9; }
+    .voice-meta { font-size: .8rem; color: var(--text-sub); font-weight: 500; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 720px; margin: 2.5rem auto 0; }
+    details {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+    }
+    summary {
+      cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 500; font-size: .95rem;
+      color: var(--brown-dk);
+    }
+    summary::after {
+      content: '+'; font-size: 1.4rem; color: var(--green);
+      transition: transform .2s;
+    }
+    details[open] summary::after { content: '−'; }
+    .faq-answer { font-size: .875rem; color: var(--text-sub); padding-top: .8rem; line-height: 1.85; }
+
+    /* ── FLOW ── */
+    .flow { background: var(--green-bg); }
+    .flow-steps {
+      display: flex; gap: 0; margin-top: 3rem;
+      overflow-x: auto; padding-bottom: 1rem;
+    }
+    .flow-step {
+      flex: 1; min-width: 160px;
+      text-align: center; padding: 1.5rem 1rem;
+      position: relative;
+    }
+    .flow-step:not(:last-child)::after {
+      content: '→';
+      position: absolute; right: -8px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem; color: var(--green); opacity: .4;
+    }
+    .flow-icon-wrap { position: relative; display: inline-block; margin: 0 auto .8rem; }
+    .flow-circle {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--white); border: 2px solid var(--green);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .flow-num {
+      position: absolute; top: -4px; right: -6px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--green); color: #fff;
+      font-size: .7rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 2px var(--white);
+    }
+    .flow-step h4 { font-size: .85rem; font-weight: 700; color: var(--brown-dk); margin-bottom: .3rem; }
+    .flow-step p { font-size: .78rem; color: var(--text-sub); }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-lt) 100%);
+      text-align: center; color: var(--white);
+      padding: 80px 5%;
+    }
+    .cta-section h2 {
+      font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+      font-weight: 600; margin-bottom: 1rem;
+    }
+    .cta-section p { opacity: .9; margin-bottom: 2rem; font-size: 1rem; }
+    .btn-white {
+      background: var(--white); color: var(--green);
+      padding: .9rem 2.2rem; border-radius: 32px;
+      text-decoration: none; font-size: 1rem; font-weight: 700;
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      transition: all .25s;
+      display: inline-block;
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.2); }
+
+    /* ── CONTACT ── */
+    .contact { padding: 80px 5%; }
+    .contact-inner {
+      max-width: 640px; margin: 0 auto;
+      background: var(--beige); border-radius: 24px;
+      padding: 3rem; border: 1px solid var(--border);
+    }
+    .contact h2 {
+      font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      font-size: 1.6rem; color: var(--brown-dk);
+      margin-bottom: .5rem;
+    }
+    .contact-sub { color: var(--text-sub); font-size: .9rem; margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    label { display: block; font-size: .85rem; font-weight: 500; color: var(--brown-dk); margin-bottom: .4rem; }
+    .req { color: #c0392b; margin-left: 4px; font-size: .8rem; }
+    input, select, textarea {
+      width: 100%; padding: .75rem 1rem;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: .9rem; color: var(--text);
+      background: var(--white);
+      transition: border-color .2s;
+      appearance: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none; border-color: var(--green);
+    }
+    textarea { resize: vertical; min-height: 120px; }
+    .form-submit {
+      width: 100%; padding: 1rem;
+      background: var(--green); color: var(--white);
+      border: none; border-radius: 32px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      cursor: pointer; margin-top: .5rem;
+      transition: background .2s;
+    }
+    .form-submit:hover { background: var(--green-lt); }
+    .form-note { font-size: .78rem; color: var(--text-sub); text-align: center; margin-top: 1rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dk); color: rgba(255,255,255,.7);
+      padding: 3rem 5% 2rem;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;
+    }
+    .footer-brand img { height: 32px; width: auto; margin-bottom: .6rem; filter: brightness(0) invert(1); display: block; }
+    .footer-brand p { font-size: .8rem; line-height: 1.7; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,.6); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { text-align: center; font-size: .78rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.5rem; }
+
+    /* ── CONCEPT ── */
+    .concept { background: var(--brown-dk); padding: 72px 5%; text-align: center; }
+    .concept-inner { max-width: 720px; margin: 0 auto; }
+    .concept-lead {
+      font-size: .95rem; font-weight: 700; letter-spacing: .1em;
+      color: var(--green-lt); margin-bottom: 1.2rem;
+    }
+    .concept-lead .t-logo { font-size: 1em; letter-spacing: .02em; }
+    .concept-cards {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      gap: 1rem; align-items: center; margin: 2.5rem 0;
+    }
+    .concept-card {
+      background: rgba(255,255,255,.07);
+      border: 1.5px solid rgba(43,191,173,.3);
+      border-radius: 20px; padding: 2rem 1.5rem;
+    }
+    .concept-card .kw {
+      font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      font-size: 2rem; font-weight: 600;
+      color: var(--green-lt); display: block; margin-bottom: .6rem;
+    }
+    .concept-card p { color: rgba(255,255,255,.8); font-size: .9rem; line-height: 1.75; }
+    .concept-arrow {
+      font-size: 2rem; color: var(--brown); font-weight: 700;
+    }
+    .concept-desc {
+      color: rgba(255,255,255,.7); font-size: .95rem;
+      line-height: 1.9; max-width: 560px; margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      .concept-cards { grid-template-columns: 1fr; }
+      .concept-arrow { transform: rotate(90deg); display: block; }
+    }
+
+    /* ── INLINE CTA ── */
+    .inline-cta {
+      background: var(--green-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 2.5rem 5%;
+    }
+    .inline-cta p {
+      font-size: .95rem; color: var(--text-sub);
+      margin-bottom: 1.2rem;
+    }
+    .inline-cta strong { color: var(--brown-dk); }
+
+    /* ── COMPARE ── */
+    .compare { background: var(--beige); }
+    .compare-wrap { overflow-x: auto; margin-top: 2.5rem; }
+    .scroll-hint { display: none; text-align: center; font-size: .72rem; color: var(--text-sub); margin-top: 1.5rem; }
+    .compare-table {
+      width: 100%; border-collapse: collapse;
+      min-width: 560px;
+    }
+    .compare-table th, .compare-table td {
+      padding: 1rem 1.2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      font-size: .9rem;
+      vertical-align: middle;
+    }
+    .compare-table thead th {
+      background: var(--white);
+      font-weight: 700;
+      font-size: .85rem;
+      color: var(--text-sub);
+      letter-spacing: .04em;
+    }
+    .compare-table thead th.col-tsumuie {
+      background: var(--green);
+      color: var(--white);
+      border-radius: 12px 12px 0 0;
+      font-size: .95rem;
+    }
+    .compare-table tbody tr:nth-child(even) td { background: rgba(255,255,255,.5); }
+    .compare-table td.row-label {
+      text-align: left; font-weight: 500;
+      color: var(--brown-dk); background: var(--white);
+    }
+    .compare-table td.col-tsumuie {
+      background: rgba(43,191,173,.06);
+      font-weight: 700; color: var(--green);
+    }
+    .check { color: var(--green); font-size: 1.3rem; }
+    .cross { color: #bbb; font-size: 1.3rem; }
+    .tri  { color: #f5831a; font-size: 1.1rem; }
+
+    /* ── VISUAL BAND ── */
+    .visual-band {
+      position: relative;
+      min-height: 220px;
+      background: linear-gradient(135deg, var(--brown-dk) 0%, #3a3630 100%);
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 3rem 5%;
+      overflow: hidden;
+    }
+    .visual-band::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1684744309616-df259b65b139?w=1400&q=80') center/cover;
+      opacity: .18;
+    }
+    .visual-band-inner { position: relative; z-index: 1; }
+    .visual-band h3 {
+      font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      color: var(--white); font-weight: 600;
+      margin-bottom: .8rem; line-height: 1.55;
+    }
+    .visual-band p { color: rgba(255,255,255,.82); font-size: .95rem; margin-bottom: 1.5rem; }
+
+    /* ── STORY ── */
+    .story-section { background: var(--beige); padding: 72px 5%; }
+    .story-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .story-kicker { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; font-size: 1.35rem; font-weight: 600; color: var(--brown-dk); margin-bottom: 1.2rem; }
+    .story-body { font-size: .95rem; color: var(--text-sub); line-height: 2; }
+    .story-scene { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .story-scene-title { font-size: .85rem; font-weight: 700; color: var(--green); letter-spacing: .06em; margin-bottom: 1rem; }
+    .story-scene-list { list-style: none; padding: 0; margin-bottom: 1.2rem; }
+    .story-scene-list li { font-size: .9rem; color: var(--text); line-height: 1.8; padding: .5rem 0; border-bottom: 1px solid var(--border); }
+    .story-scene-list li:last-child { border-bottom: none; }
+    .story-scene-list li::before { content: "✦ "; color: var(--green); font-size: .75rem; }
+    .story-scene-note { font-size: .82rem; color: var(--text-sub); line-height: 1.85; margin-top: 1rem; }
+    @media(max-width:680px) { .story-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* ── STATS ── */
+    .stats-strip { background: var(--brown-dk); padding: 2.5rem 5%; }
+    .stats-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; text-align: center; }
+    .stat-item { padding: 1.2rem; border-right: 1px solid rgba(255,255,255,.12); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; font-size: 2.6rem; font-weight: 600; color: var(--green-lt); line-height: 1; }
+    .stat-unit { font-size: 1rem; color: var(--green-lt); }
+    .stat-label { font-size: .82rem; color: rgba(255,255,255,.75); margin-top: .5rem; line-height: 1.6; }
+    .stat-source { font-size: .72rem; color: rgba(255,255,255,.4); margin-top: 1rem; text-align: center; max-width: 860px; margin-left: auto; margin-right: auto; }
+
+    /* ── RISK ── */
+    .risk { background: var(--white); }
+    .risk-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: .9rem; margin-top: 2rem; }
+    @media (max-width: 900px) { .risk-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 520px) { .risk-grid { grid-template-columns: repeat(2, 1fr); } }
+    .risk-card {
+      display: flex; flex-direction: column; align-items: center; text-align: center; gap: .55rem;
+      background: #fff8f8; border: 1px solid #fdd; border-radius: 14px;
+      padding: 1.4rem .9rem;
+    }
+    .risk-icon {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: #fbe1e1;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .risk-icon svg { width: 22px; height: 22px; }
+    .risk-card h3 { font-size: .82rem; font-weight: 700; color: var(--text); line-height: 1.45; }
+    .risk-card p { font-size: .72rem; color: var(--text-sub); line-height: 1.55; }
+
+    /* ── TARGET ── */
+    .target-section { background: var(--green-bg); }
+    .target-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; max-width: 860px; margin: 2.5rem auto 0; }
+    .target-list { list-style: none; }
+    .target-list li { display: flex; align-items: center; gap: .6rem; padding: .7rem 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
+    .target-list li:last-child { border-bottom: none; }
+    .target-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .area-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .area-tag { background: var(--white); border: 1.5px solid var(--green); color: var(--brown-dk); font-size: .82rem; font-weight: 500; padding: .35rem .9rem; border-radius: 20px; }
+
+    /* ── DEMERIT ── */
+    .demerit { background: var(--beige); }
+    .demerit-list { max-width: 720px; margin: 2.5rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
+    .demerit-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; }
+    .demerit-issue { padding: 1.2rem 1.5rem; border-right: 1px solid var(--border); }
+    .demerit-issue .di-label { font-size: .72rem; font-weight: 700; color: #c0392b; letter-spacing: .06em; margin-bottom: .4rem; }
+    .demerit-issue p { font-size: .875rem; color: var(--text); }
+    .demerit-soln { padding: 1.2rem 1.5rem; background: var(--green-bg); }
+    .demerit-soln .ds-label { font-size: .72rem; font-weight: 700; color: var(--green); letter-spacing: .06em; margin-bottom: .4rem; }
+    .demerit-soln p { font-size: .875rem; color: var(--text); }
+
+    /* ── PROFILE ── */
+    .profile { background: var(--white); }
+    .profile-inner { max-width: 720px; margin: 2.5rem auto 0; background: var(--beige); border-radius: 20px; padding: 2.5rem; border: 1px solid var(--border); display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: start; }
+    .profile-avatar { width: 100px; height: 100px; border-radius: 50%; background: var(--green-bg); border: 3px solid var(--green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .profile-avatar svg { width: 48px; height: 48px; }
+    .profile-name { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--brown-dk); margin-bottom: .3rem; }
+    .profile-license { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .profile-license span { background: var(--green); color: var(--white); font-size: .72rem; font-weight: 700; padding: .2rem .7rem; border-radius: 20px; letter-spacing: .04em; }
+    .profile-bio { font-size: .875rem; color: var(--text-sub); line-height: 1.85; margin-bottom: 1rem; }
+    .profile-contact a { color: var(--green); font-size: .875rem; text-decoration: none; font-weight: 500; }
+    .company-info { max-width: 720px; margin: 1.5rem auto 0; text-align: center; font-size: .82rem; color: var(--text-sub); }
+
+    @media (max-width: 768px) {
+      .stats-inner { gap: .5rem; }
+      .stat-item { padding: .6rem .3rem; }
+      .stat-num { font-size: 1.5rem; }
+      .stat-unit { font-size: .8rem; }
+      .stat-label { font-size: .66rem; margin-top: .3rem; }
+      .stat-item:nth-child(3) .stat-num span:first-child { font-size: .7rem !important; }
+      .stat-item:nth-child(3) .stat-num span:last-child { font-size: 1.7rem !important; }
+      .risk-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+      .risk-card { padding: 1rem .6rem; gap: .35rem; }
+      .risk-icon { width: 36px; height: 36px; }
+      .risk-icon svg { width: 18px; height: 18px; }
+      .risk-card h3 { font-size: .76rem; }
+      .risk-card p { font-size: .66rem; }
+      .target-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .demerit-card { grid-template-columns: 1fr; }
+      .demerit-issue { border-right: none; border-bottom: 1px solid var(--border); }
+      .profile-inner { grid-template-columns: 1fr; text-align: center; }
+      .profile-avatar { margin: 0 auto; }
+      .profile-license { justify-content: center; }
+      .flow-mini { flex-wrap: nowrap !important; justify-content: flex-start !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; padding: 1.1rem .9rem !important; gap: .6rem !important; }
+      .flow-mini > div:not(.flow-mini-arrow) { flex: 0 0 118px !important; min-width: 118px !important; }
+      .flow-mini > div:not(.flow-mini-arrow) > div:nth-child(2) { font-size: .82rem !important; }
+      .flow-mini > div:not(.flow-mini-arrow) > div:nth-child(3) { font-size: .66rem !important; }
+      .flow-mini-arrow { display: flex !important; align-items: center; font-size: 1.1rem !important; }
+      .pain-grid { gap: 1rem; }
+      .pain-card { padding: 1.25rem; }
+      .pain-icon { width: 42px; height: 42px; margin-bottom: .7rem; }
+      .pain-icon svg { width: 20px; height: 20px; }
+      .pain-card h3 { font-size: .95rem; margin-bottom: .35rem; }
+      .pain-card p { font-size: .82rem; }
+      .benefits-grid { display: flex !important; flex-direction: column !important; gap: .7rem !important; margin-top: 1.75rem; }
+      .benefit-card { flex: 0 0 auto !important; max-width: none !important; width: 100%; padding: .9rem 1.1rem !important; display: flex !important; align-items: center !important; gap: .9rem; text-align: left; }
+      .benefit-icon { width: 42px; height: 42px; margin-bottom: 0; flex-shrink: 0; }
+      .benefit-icon svg { width: 20px; height: 20px; }
+      .benefit-card h3 { font-size: .92rem; margin-bottom: 0; }
+      .benefit-card p { display: none; }
+      .compare-table { min-width: 480px; }
+      .compare-table th, .compare-table td { padding: .7rem .6rem; font-size: .78rem; }
+      .compare-table thead th.col-tsumuie { font-size: .8rem; }
+      .br-mobile { display: inline; }
+      .scroll-hint { display: block; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .flow-steps { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; gap: .4rem !important; margin-top: 2rem; padding-bottom: .75rem; }
+      .flow-step { flex: 0 0 104px !important; min-width: 104px !important; padding: .9rem .3rem !important; }
+      .flow-step::after { display: none; }
+      .flow-icon-wrap { margin: 0 auto .5rem; }
+      .flow-circle { width: 46px; height: 46px; font-size: 1.1rem; }
+      .flow-num { width: 18px; height: 18px; font-size: .6rem; top: -2px; right: -4px; }
+      .flow-step h4 { font-size: .74rem; margin-bottom: .15rem; }
+      .flow-step p { font-size: .62rem; line-height: 1.35; }
+      .contact-inner { padding: 2rem 1.5rem; }
+      section { padding: 60px 4%; }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .9s cubic-bezier(.16,.84,.44,1), transform .9s cubic-bezier(.16,.84,.44,1);
+      transition-delay: var(--reveal-delay, 0s);
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal-img {
+      opacity: 0;
+      transform: scale(1.08);
+      transition: opacity 1.1s ease, transform 1.3s cubic-bezier(.16,.84,.44,1);
+      transition-delay: var(--reveal-delay, 0s);
+    }
+    .reveal-img.is-visible { opacity: 1; transform: scale(1); }
+
+    /* 背景画像はスクロールでゆっくり視差移動 */
+    @media (hover: hover) and (pointer: fine) {
+      .visual-band::before { background-attachment: fixed; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-img {
+        opacity: 1 !important; transform: none !important; transition: none !important;
+      }
+      .visual-band::before { background-attachment: scroll !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sottodesign0-hub.github.io/Tsumuieorner/#organization",
+        "name": "株式会社SOTTO",
+        "alternateName": ["SOTTO", "ツムイエ", "Tsumuie"],
+        "brand": "Tsumuie（ツムイエ）",
+        "url": "https://sottodesign0-hub.github.io/Tsumuieorner/",
+        "logo": "https://sottodesign0-hub.github.io/Tsumuieorner/data/IMG_6487.PNG",
+        "founder": {
+          "@type": "Person",
+          "name": "増田早紀",
+          "jobTitle": "一級建築士・宅地建物取引士"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "空き家活用・空家活用・空き家相続・賃貸マッチングサービス",
+        "name": "Tsumuie（ツムイエ）",
+        "provider": { "@id": "https://sottodesign0-hub.github.io/Tsumuieorner/#organization" },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "大阪府" },
+          { "@type": "City", "name": "大阪" },
+          { "@type": "AdministrativeArea", "name": "兵庫県" },
+          { "@type": "City", "name": "神戸市" },
+          { "@type": "AdministrativeArea", "name": "京都府" },
+          { "@type": "AdministrativeArea", "name": "奈良県" },
+          { "@type": "AdministrativeArea", "name": "滋賀県" },
+          { "@type": "AdministrativeArea", "name": "和歌山県" }
+        ],
+        "description": "相続した空き家・空家活用でお悩みの方向けのサービス。大阪・神戸をはじめ関西エリアで、空き家を賃貸として活用しながら、10〜15年後に事前に合意した条件で入居者へ引き継ぐハイブリッドサービス。管理・マッチング・契約設計まで一貫サポート。",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "JPY",
+          "price": "0",
+          "description": "初回無料相談"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "遠方（県外）に住んでいても利用できますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "はい、もちろんです。関西に実家があり、関東など遠方にお住まいのオーナー様のご利用が多くございます。相談・手続きはオンラインで完結できる部分も多く、現地での対応はTsumuieが代行します。" }
+          },
+          {
+            "@type": "Question",
+            "name": "定期借家契約とは何ですか？普通の賃貸と何が違うの？",
+            "acceptedAnswer": { "@type": "Answer", "text": "定期建物賃貸借契約は、契約期間が終了すると更新なく終了する賃貸契約です。通常の賃貸（普通借家）と異なり、期間終了後に借主が退去を拒否できないため、オーナー様は明け渡しリスクなく貸し出せます。" }
+          },
+          {
+            "@type": "Question",
+            "name": "入居者がリフォームを行う場合、費用は誰が負担しますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "基本的に入居者（将来の取得予定者）が費用を負担します。自分が取得する家として責任を持ってリフォームしてくれるため、物件の価値を維持・向上させながら活用できます。" }
+          },
+          {
+            "@type": "Question",
+            "name": "将来、入居者が取得しなかった場合はどうなりますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "万一入居者が取得できない場合の取り決めも契約時に明記します。定期借家期間が終了すれば明け渡しを受けられるため、オーナー様が不利な状況になる仕組みではありません。詳しくは無料相談でご説明します。" }
+          },
+          {
+            "@type": "Question",
+            "name": "費用・手数料はどのくらいかかりますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "初回の無料相談はもちろん費用不要です。マッチング・契約設計・サポート費用については物件や条件によって異なるため、相談時に詳しくご説明いたします。まずはお気軽にご相談ください。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ══ HEADER（Tsumuieプラットフォームと共通） ══ -->
+<header>
+  <button class="h-ham" id="ham"><span></span><span></span><span></span></button>
+  <a href="#" class="h-logo"><img src="data/logo-mark.png" alt="Tsumuie（ツムイエ）"></a>
+  <ul class="h-nav">
+    <li><a href="#how">仕組み</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#company">運営会社</a></li>
+  </ul>
+  <a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener" class="h-cta-line">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINE相談
+  </a>
+</header>
+<div class="mob-menu" id="mobMenu">
+  <a href="#how" onclick="closeMob()">仕組み</a>
+  <a href="#faq" onclick="closeMob()">FAQ</a>
+  <a href="#company" onclick="closeMob()">運営会社</a>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about" style="padding-top:140px;">
+  <div class="about-inner" style="grid-template-columns:1fr;">
+    <div class="about-text center" style="max-width:680px;margin:0 auto;">
+      <div class="section-label" style="display:flex;align-items:center;justify-content:center;gap:.4rem;">
+        <img src="data/IMG_6493.PNG" alt="Tsumuie" style="height:1.8rem;width:auto;vertical-align:middle;">
+        <span>とは</span>
+      </div>
+      <h2 class="section-title">賃貸×将来取得の<br>新しい空き家活用</h2>
+      <img src="data/kousei.png" alt="Tsumuieサービス構成図" style="width:100%;max-width:640px;margin:1.5rem auto 1.5rem;display:block;">
+      <p><span class="t-logo"><span class="t1">Tsumu</span><span class="t2">ie</span></span>は、空き家オーナー様と<br class="br-mobile">住まいを真剣に探す挑戦者を<br>つなぐハイブリッドサービスです。</p>
+      <p>入居者はまず賃貸としてスタートし、<br>10〜15年後に事前に合意した条件でお家を取得します。</p>
+      <p>管理・マッチング・契約設計まで、一貫してサポートし、<br>遠方のオーナー様にもオンラインで丁寧に対応します。</p>
+      <div class="tag-row">
+        <span class="tag">関西エリア対応</span>
+        <span class="tag">オンライン相談OK</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONCEPT ── -->
+<section class="concept">
+  <div class="concept-inner">
+    <p class="concept-lead" style="display:flex;align-items:center;justify-content:center;gap:.4rem;">
+      <img src="data/IMG_6493.PNG" alt="Tsumuie" style="height:1.3rem;width:auto;vertical-align:middle;">
+      <span>の考え方</span>
+    </p>
+    <div class="concept-cards">
+      <div class="concept-card">
+        <span class="kw">「活かす」</span>
+        <p>すぐに売却するのではなく、まず空き家を賃貸として活かす選択を。毎月の収入を得ながら、大切な家を守り続けます。</p>
+      </div>
+      <div class="concept-arrow">→</div>
+      <div class="concept-card">
+        <span class="kw">「つなぐ」</span>
+        <p>家を持ちたい家族のマイホームとして再活用し、次の世代へとつなぐ選択に変わります。家の記憶も、一緒に受け継がれます。</p>
+      </div>
+    </div>
+    <p class="concept-desc"><img src="data/IMG_6493-tight.png" alt="Tsumuie" style="height:.85em;width:auto;vertical-align:baseline;">を使えば、すぐに売却するのではなく、<br>まず「活かす」という選択ができます。<br>そして、家を持ちたい家族のマイホームとして再活用し、<br>「つなぐ」選択に変わります。</p>
+  </div>
+</section>
+
+<!-- ── AREA STRIP ── -->
+<div style="background:var(--brown-dk);color:rgba(255,255,255,.9);text-align:center;padding:.75rem 5%;font-size:.85rem;letter-spacing:.04em;">
+  📍 対応エリア：<strong style="color:#fff;">大阪・神戸・京都・奈良・滋賀・和歌山</strong>など関西全域（大阪府・兵庫県・京都府・奈良県・滋賀県・和歌山県）で空家活用・空き家の相続相談に対応。遠方にお住まいのオーナー様も<strong style="color:#fff;">オンラインで完結</strong>できます。
+</div>
+
+<!-- ── HERO CTA ── -->
+<section class="hero">
+  <div class="hero-inner" style="max-width:680px;margin:0 auto;text-align:center;">
+    <h1>大切な空き家、まず<em>賃貸から</em>始めませんか？</h1>
+    <p style="margin-left:auto;margin-right:auto;">すぐに売らなくていい。<br>賃貸でスタートし、将来の譲渡まで一緒に考えます。</p>
+    <p style="margin-top:.75rem;margin-left:auto;margin-right:auto;">固定資産税・管理の負担を解消しながら、<br>大切な家を次の世代へつなぐ新しい選択肢です。</p>
+    <div class="hero-btns" style="justify-content:center;">
+      <a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener" class="btn-primary">無料相談を申し込む</a>
+      <a href="#about" class="btn-outline">サービスを知る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAIN ── -->
+<section class="pain" id="pain">
+  <div class="center">
+    <div class="section-label">こんなお悩みはありませんか</div>
+    <h2 class="section-title">空き家を持つオーナー様へ</h2>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+      </div>
+      <h3>遠方に住んでいて管理できない</h3>
+      <p>関東や他府県に住みながら関西の実家を相続——草木の管理、近所への申し訳なさ、現地に行く手間が積み重なります。</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="5" width="20" height="14" rx="2"/>
+          <path d="M2 10h20M6 15h2M10 15h4"/>
+        </svg>
+      </div>
+      <h3>固定資産税と老朽化リスクが心配</h3>
+      <p>空き家のまま放置すると固定資産税は上がり、老朽化も進む一方。でも売るにも貸すにも踏み出せていません。</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <path d="M9 22V12h6v10"/>
+        </svg>
+      </div>
+      <h3>売るか貸すか、判断できない</h3>
+      <p>思い出の実家を手放すには踏み切れない。次に住む方には大切に使ってほしい。</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 8v4l3 3"/>
+        </svg>
+      </div>
+      <h3>どこに相談すればいいか分からない</h3>
+      <p>不動産会社に相談すると売却を勧められる——自分の状況にあった選択肢を丁寧に聞いてほしい、という声は多いです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<section class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">900<span class="stat-unit">万戸</span></div>
+      <div class="stat-label">全国の空き家数<br>20年で<strong style="color:#fff;">1.4倍</strong>に増加</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">13.8<span class="stat-unit">%</span></div>
+      <div class="stat-label">全国の空き家率<br>住宅<strong style="color:#fff;">7軒に1軒</strong>が空き家</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span style="font-size:1rem;font-weight:400;letter-spacing:.02em;">最大</span><span style="font-size:3.2rem;font-weight:700;color:var(--green-lt);">6倍</span></div>
+      <div class="stat-label">特定空家の固定資産税<br>放置すると<strong style="color:#fff;">課税が強化</strong>される</div>
+    </div>
+  </div>
+  <p class="stat-source">出典：総務省「住宅・土地統計調査」（2023年）</p>
+</section>
+
+<!-- ── RISK ── -->
+<section class="risk" id="risk">
+  <div class="center">
+    <div class="section-label">放置のリスク</div>
+    <h2 class="section-title">空き家を放置すると・・・</h2>
+  </div>
+  <div class="risk-grid">
+    <div class="risk-card">
+      <div class="risk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3l3 3L9 18H6v-3z"/><path d="M3 21h18"/><path d="M13 7l3-3 3 3-3 3"/></svg></div>
+      <h3>修繕費が膨らむ</h3>
+      <p>建物の老朽化が進行</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 7h6.5a2.5 2.5 0 010 5H8m0 0h7a2.5 2.5 0 010 5H8"/></svg></div>
+      <h3>固定資産税が最大6倍</h3>
+      <p>「特定空家」に指定されると</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 21v-1a5 5 0 015-5h1"/><circle cx="17" cy="9" r="2.5"/><path d="M14.5 21v-1a4 4 0 014-4h.5a4 4 0 013.8 2.7"/></svg></div>
+      <h3>近隣トラブルの原因に</h3>
+      <p>雑草・害虫・不法侵入など</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4l5 5-1.5 1.5L14 6z"/><path d="M13.5 5.5L4 15v3.5L3 21l2.5-1L15 10.5z"/><path d="M3 21h9"/></svg></div>
+      <h3>解体費用を請求される</h3>
+      <p>行政代執行（強制解体）で</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 5h6v6"/></svg></div>
+      <h3>売却価格が下がり続ける</h3>
+      <p>買い手がつかないまま</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 6h10"/><path d="M7 6l-3.5 7a3.5 3.5 0 007 0z"/><path d="M17 6l-3.5 7a3.5 3.5 0 007 0z"/></svg></div>
+      <h3>法的リスクが高まる</h3>
+      <p>管理責任を問われる</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── INLINE CTA 1 ── -->
+<div class="inline-cta">
+  <p><strong>「うちの空き家、どうすればいいか分からない」</strong><br>まずは30分の無料相談から。オンラインで完結できます。</p>
+  <a href="#contact" class="btn-primary">無料相談を申し込む</a>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how" id="how">
+  <div class="center">
+    <div class="section-label">仕組み</div>
+    <h2 class="section-title">どうやって成り立つの？</h2>
+    <p class="section-desc">2つの契約を同時に結ぶことで、<br>オーナー様も入居者も「見通しのある関係」を築きます。</p>
+  </div>
+  <!-- 概要フロー -->
+  <div class="flow-mini" style="max-width:860px;margin:2.5rem auto 3rem;background:var(--white);border-radius:16px;border:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+    <div style="text-align:center;flex:1;min-width:120px;">
+      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">1</div>
+      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">空き家を提供</div>
+      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">条件を事前に確定</div>
+    </div>
+    <div class="flow-mini-arrow" style="color:var(--green);font-size:1.4rem;font-weight:700;flex-shrink:0;">→</div>
+    <div style="text-align:center;flex:1;min-width:120px;">
+      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">2</div>
+      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">賃貸スタート</div>
+      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">家賃収入を得る</div>
+    </div>
+    <div class="flow-mini-arrow" style="color:var(--green);font-size:1.4rem;font-weight:700;flex-shrink:0;">→</div>
+    <div style="text-align:center;flex:1;min-width:120px;">
+      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">3</div>
+      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">積み立て継続</div>
+      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">10〜15年間</div>
+    </div>
+    <div class="flow-mini-arrow" style="color:var(--green);font-size:1.4rem;font-weight:700;flex-shrink:0;">→</div>
+    <div style="text-align:center;flex:1;min-width:120px;">
+      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">4</div>
+      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">入居者が取得</div>
+      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">売却先確定</div>
+    </div>
+  </div>
+  <p class="scroll-hint">← 横にスクロールできます →</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>【空家を提供】①　定期建物賃貸借契約</h3>
+        <p>更新なしの定期借家契約で賃貸をスタートします。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>【空家を提供】②　将来譲渡予約契約</h3>
+        <p>将来の売却価格・時期・条件を契約時にあらかじめ明文化します。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>入居者が住まいを育てながら暮らす</h3>
+        <p>将来自分のものになる家として、入居者は大切に使い、リフォームも自由に行います。<br>オーナー様には毎月賃料が入ります。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h3>10〜15年後、合意した条件で取得完了</h3>
+        <p>入居者がオーナー様のお家を譲渡。お家を引き継ぎ大切に使い続けます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BENEFITS ── -->
+<section id="benefits">
+  <div class="center">
+    <div class="section-label">オーナー様のメリット</div>
+    <h2 class="section-title">空き家が、<br>安心の資産に変わります</h2>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+        </svg>
+      </div>
+      <h3>空き家が、ちゃんとした収益に変わる</h3>
+      <p>持て余していた空き家が、毎月の賃料という形でしっかり収益を生む資産に変わります。固定資産税を払うだけの日々から卒業できます。</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+        </svg>
+      </div>
+      <h3>「その後」を考えなくていい安心感</h3>
+      <p>契約を結んだ時点で、その家の10〜15年後の姿まで見えている。将来の使い道に迷い続ける必要がありません。</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+      </div>
+      <h3>リフォームで家が新しい表情を取り戻す</h3>
+      <p>建物の状態や入居者の希望に合わせてリフォームするので、古くなった空き家が生まれ変わります。家を大切に使ってもらえる安心感も。</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <h3>管理・手続きはすべておまかせ</h3>
+      <p>マッチング・契約設計・入居後のサポートまで<span class="t-logo"><span class="t1">Tsumu</span><span class="t2">ie</span></span>が一括対応。遠方にお住まいの方も安心です。</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/>
+        </svg>
+      </div>
+      <h3>大切な家の記憶が、次の世代へつながる</h3>
+      <p>家を壊さず、誰かが住み続けてくれる——それだけでオーナー様の心の重荷が大きく軽くなります。思い出ごと、次の物語へ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARE ── -->
+<section class="compare" id="compare">
+  <div class="center">
+    <div class="section-label">他の選択肢との違い</div>
+    <h2 class="section-title">売る・貸す・<img src="data/IMG_6493-tight.png" alt="Tsumuie" style="height:.62em;width:auto;vertical-align:baseline;margin:0 0 0 .05em;"><br>何が違うの？</h2>
+  </div>
+  <p class="scroll-hint">← 横にスクロールできます →</p>
+  <div class="compare-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width:30%;text-align:left;">比較ポイント</th>
+          <th>そのまま売る</th>
+          <th>普通に貸す</th>
+          <th class="col-tsumuie">✦ Tsumuie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label">毎月の収入</td>
+          <td><span class="cross">✕</span><br><small>売ったら終わり</small></td>
+          <td><span class="check">○</span><br><small>賃料収入あり</small></td>
+          <td class="col-tsumuie"><span class="check">○</span><br><small>賃料収入あり</small></td>
+        </tr>
+        <tr>
+          <td class="row-label">将来の売却先確保</td>
+          <td><span class="circle">〇</span><br><small>売却先が確定</small></td>
+          <td><span class="cross">✕</span><br><small>別途探す必要あり</small></td>
+          <td class="col-tsumuie"><span class="check">○</span><br><small>契約時に確定</small></td>
+        </tr>
+        <tr>
+          <td class="row-label">管理の手間</td>
+          <td><span class="check">○</span><br><small>不要</small></td>
+          <td><span class="check">○</span><br><small>自分で対応</small></td>
+          <td class="col-tsumuie"><span class="check">○</span><br><small>Tsumuieが一括対応</small></td>
+        </tr>
+        <tr>
+          <td class="row-label">家を大切に使ってもらえる</td>
+          <td><span class="tri">△</span><br><small>買主次第</small></td>
+          <td><span class="tri">△</span><br><small>入居者次第</small></td>
+          <td class="col-tsumuie"><span class="check">○</span><br><small>将来の取得者が丁寧に</small></td>
+        </tr>
+        <tr>
+          <td class="row-label">遠方オーナーへの対応</td>
+          <td><span class="tri">△</span><br><small>業者任せ</small></td>
+          <td><span class="cross">✕</span><br><small>現地対応が必要</small></td>
+          <td class="col-tsumuie"><span class="check">○</span><br><small>オンライン完結</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── INLINE CTA 2 ── -->
+<div class="inline-cta">
+  <p><strong><span class="t-logo"><span class="t1" style="color:#5df0df;">Tsumu</span><span class="t2" style="color:#ffb066;">ie</span></span>なら、収益・安心・思い出を同時に守れます。</strong><br>関西エリア対応。まずはお気軽にご相談ください。</p>
+  <a href="#contact" class="btn-primary">無料相談を申し込む</a>
+</div>
+
+<!-- ── VOICE ── -->
+<section class="voice">
+  <div class="center">
+    <div class="section-label"><img src="data/IMG_6493.PNG" alt="Tsumuie" class="logo-inline">希望者の声</div>
+    <h2 class="section-title">こんな方が<br>Tsumuieを求めています</h2>
+    <p class="section-desc" style="margin-top:.6rem;">あなたの空き家を必要としている人が、確かにいます。</p>
+  </div>
+  <div class="voice-grid" style="margin-top:2.5rem;">
+    <div class="voice-card">
+      <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem;">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--green-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:.95rem;color:var(--brown-dk);">30代後半・女性</div>
+          <div style="font-size:.8rem;color:var(--text-sub);">サロン経営 / 個人事業主</div>
+        </div>
+      </div>
+      <p class="voice-text">サロンの部屋を賃貸で借りて経営しているが、自分の住まい兼サロンにしたい。家賃は払えるのに個人事業主ということで住宅ローン審査が通りにくい。賃貸ではペット可・店舗可で広いリビングのある物件がなかなか見つからず、Tsumuieに可能性を感じています。</p>
+    </div>
+    <div class="voice-card">
+      <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem;">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--green-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:.95rem;color:var(--brown-dk);">40代後半・ご家族</div>
+          <div style="font-size:.8rem;color:var(--text-sub);">両親ともに自営業 / 賃貸在住</div>
+        </div>
+      </div>
+      <p class="voice-text">払い続ける家賃が勿体ないと感じています。住宅ローンを組みにくい自営業でも、家族で安心して長く住める家を探しており、Tsumuieのモデルに希望を見出しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOW ── -->
+<section class="flow" id="flow">
+  <div class="center">
+    <div class="section-label">ご利用の流れ</div>
+    <h2 class="section-title">相談から契約まで<br><img src="data/IMG_6493.PNG" alt="Tsumuie" style="height:.85em;vertical-align:middle;margin-bottom:.1em;">がすべてサポート</h2>
+  </div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-icon-wrap"><div class="flow-circle">📞</div><span class="flow-num">1</span></div>
+      <h4>無料相談</h4>
+      <p>物件の状況やご希望をヒアリング</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-icon-wrap"><div class="flow-circle">🔍</div><span class="flow-num">2</span></div>
+      <h4>マッチング</h4>
+      <p>入居希望者とのご紹介・調整</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-icon-wrap"><div class="flow-circle">📝</div><span class="flow-num">3</span></div>
+      <h4>条件設計</h4>
+      <p>賃料・売却価格・期間を確定</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-icon-wrap"><div class="flow-circle">✍️</div><span class="flow-num">4</span></div>
+      <h4>契約締結</h4>
+      <p>2つの契約を同時に締結</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-icon-wrap"><div class="flow-circle">🏠</div><span class="flow-num">5</span></div>
+      <h4>運用開始</h4>
+      <p>賃料収入スタート・<span class="t-logo"><span class="t1">Tsumu</span><span class="t2">ie</span></span>が管理</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-icon-wrap"><div class="flow-circle">🤝</div><span class="flow-num">6</span></div>
+      <h4>将来取得</h4>
+      <p>合意条件で入居者が取得完了</p>
+    </div>
+  </div>
+  <p class="scroll-hint">← 横にスクロールできます →</p>
+</section>
+
+<!-- ── VISUAL BAND ── -->
+<div class="visual-band">
+  <div class="visual-band-inner">
+    <h3>その空き家、まだ終わっていません。<br>誰かの「これから」の舞台になります。</h3>
+    <p>実家が空き家になっている、相続した家をどうするか悩んでいる——<br>そんな方こそ、一度Tsumuieの話を聞いてみてください。</p>
+    <a href="#contact" class="btn-white">無料相談を申し込む（オンライン対応）</a>
+  </div>
+</div>
+
+<!-- ── TARGET ── -->
+<section class="target-section" id="target">
+  <div class="center">
+    <div class="section-label">対象物件・エリア</div>
+    <h2 class="section-title">こんな物件が対象です</h2>
+  </div>
+  <div style="text-align:center;max-width:720px;margin:0 auto;padding:0 5%;">
+    <h3 style="font-size:1rem;font-weight:700;color:var(--brown-dk);margin-bottom:1.2rem;">対応エリア</h3>
+    <div class="area-tags" style="display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:.5rem .6rem;">
+      <span class="area-tag">大阪府</span>
+      <span class="area-tag">兵庫県（神戸市）</span>
+      <span class="area-tag">京都府</span>
+      <span class="area-tag">奈良県</span>
+      <span class="area-tag">滋賀県</span>
+      <span class="area-tag">和歌山県</span>
+    </div>
+    <p style="font-size:.85rem;color:var(--text-sub);margin-top:1.2rem;">関西全域対応。大阪・神戸エリアの空家活用・相続した空き家のご相談も多数。遠方オーナー様もオンラインで完結できます。</p>
+  </div>
+</section>
+
+<!-- ── DEMERIT ── -->
+<section class="demerit">
+  <div class="center">
+    <div class="section-label">正直にお伝えします</div>
+    <h2 class="section-title">デメリットとその対策</h2>
+    <p class="section-desc" style="margin-top:.5rem;">Tsumuieはすべての方に最適ではありません。<br>デメリットも含めて、正直にお伝えします。</p>
+  </div>
+  <div class="demerit-list">
+    <div class="demerit-card">
+      <div class="demerit-issue">
+        <div class="di-label">デメリット</div>
+        <p>すぐに現金化できない。<br>賃貸期間（10〜15年）終了後に売却となります。</p>
+      </div>
+      <div class="demerit-soln">
+        <div class="ds-label">対策</div>
+        <p>急ぎの場合は通常売却との組み合わせをご相談いただけます。</p>
+      </div>
+    </div>
+    <div class="demerit-card">
+      <div class="demerit-issue">
+        <div class="di-label">デメリット</div>
+        <p>リフォーム費用がかかるケースがある。<br>居住可能な状態への改修が必要な場合も。</p>
+      </div>
+      <div class="demerit-soln">
+        <div class="ds-label">対策</div>
+        <p>事前に費用シミュレーションを提示。<br>納得してからご判断いただけます。</p>
+      </div>
+    </div>
+    <div class="demerit-card">
+      <div class="demerit-issue">
+        <div class="di-label">デメリット</div>
+        <p>賃貸中の設備故障はオーナー負担。<br>給湯器・エアコンなどの修繕費が基本オーナー負担です。</p>
+      </div>
+      <div class="demerit-soln">
+        <div class="ds-label">対策</div>
+        <p>設備状態を事前確認し、修繕計画を立ててからご提案します。</p>
+      </div>
+    </div>
+    <div class="demerit-card">
+      <div class="demerit-issue">
+        <div class="di-label">デメリット</div>
+        <p>入居者事情による途中退去の可能性。<br>定期借家でもゼロではありません。</p>
+      </div>
+      <div class="demerit-soln">
+        <div class="ds-label">対策</div>
+        <p>一定のリフォームが済んでいるため、再度のTsumuie入居者募集・売却・通常賃貸への切り替えなど、次のステップをTsumuieがサポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="center">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">よくある質問</h2>
+  </div>
+  <div class="faq-list">
+    <details>
+      <summary>遠方（県外）に住んでいても利用できますか？</summary>
+      <p class="faq-answer">はい、もちろんです。関西に実家があり、関東など遠方にお住まいのオーナー様のご利用が多くございます。相談・手続きはオンラインで完結できる部分も多く、現地での対応はTsumuieが代行します。</p>
+    </details>
+    <details>
+      <summary>定期借家契約とは何ですか？普通の賃貸と何が違うの？</summary>
+      <p class="faq-answer">定期建物賃貸借契約は、契約期間が終了すると更新なく終了する賃貸契約です。通常の賃貸（普通借家）と異なり、期間終了後に借主が退去を拒否できないため、オーナー様は明け渡しリスクなく貸し出せます。</p>
+    </details>
+    <details>
+      <summary>入居者がリフォームを行う場合、費用は誰が負担しますか？</summary>
+      <p class="faq-answer">基本的に入居者（将来の取得予定者）が費用を負担します。自分が取得する家として責任を持ってリフォームしてくれるため、物件の価値を維持・向上させながら活用できます。</p>
+    </details>
+    <details>
+      <summary>将来、入居者が取得しなかった場合はどうなりますか？</summary>
+      <p class="faq-answer">万一入居者が取得できない場合の取り決めも契約時に明記します。定期借家期間が終了すれば明け渡しを受けられるため、オーナー様が不利な状況になる仕組みではありません。詳しくは無料相談でご説明します。</p>
+    </details>
+    <details>
+      <summary>費用・手数料はどのくらいかかりますか？</summary>
+      <p class="faq-answer">初回の無料相談はもちろん費用不要です。マッチング・契約設計・サポート費用については物件や条件によって異なるため、相談時に詳しくご説明いたします。まずはお気軽にご相談ください。</p>
+    </details>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" id="contact">
+  <h2>空家の引き継ぎ・活用、まず無料相談から。</h2>
+  <p>関西エリア全域をサポート。30分のオンライン相談で、あなたの空き家に合った活用プランをご提案します。遠方にお住まいの方もオンラインで完結できます。</p>
+
+  <a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;justify-content:center;gap:.75rem;background:#06C755;color:#fff;padding:1.2rem 2.5rem;border-radius:16px;text-decoration:none;font-size:1.1rem;font-weight:700;margin:0 0 1rem;transition:opacity .2s;box-shadow:0 4px 20px rgba(0,0,0,.15);"
+     onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    公式LINEで無料相談する
+  </a>
+  <p style="font-size:.8rem;color:rgba(255,255,255,.85);">※ 個人情報はサービス提供のみに使用し、第三者への提供は行いません。</p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="company">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="data/IMG_6493.PNG" alt="Tsumuie">
+      <p>空き家オーナーと住まいを必要とする挑戦者をつなぐ、<br>賃貸×将来取得のハイブリッドサービス。<br><small style="opacity:.6;">運営：株式会社SOTTO ／ 代表 増田 早紀（一級建築士・宅地建物取引士）</small></p>
+    </div>
+    <nav class="footer-links">
+      <a href="#about">サービスとは</a>
+      <a href="#benefits">オーナーのメリット</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+  <p class="footer-copy">© 2025 Tsumuie. All rights reserved.</p>
+</footer>
+
+<script>
+  // Hamburger menu（Tsumuieプラットフォームと共通のヘッダー用）
+  const ham = document.getElementById('ham');
+  const mobMenu = document.getElementById('mobMenu');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    mobMenu.classList.toggle('open');
+  });
+  function closeMob() {
+    ham.classList.remove('open');
+    mobMenu.classList.remove('open');
+  }
+
+  // FAQ smooth open/close
+  document.querySelectorAll('details').forEach(el => {
+    el.addEventListener('toggle', () => {
+      if (el.open) {
+        document.querySelectorAll('details[open]').forEach(other => {
+          if (other !== el) other.removeAttribute('open');
+        });
+      }
+    });
+  });
+
+  // ── SCROLL REVEAL ──
+  // テキストブロックはふわっと下から、背景・図版画像はスケールしながら浮かび上がる
+  const textSelectors = [
+    '.section-label', '.section-title', '.section-desc',
+    '.hero-badge', '.hero h1', '.hero p', '.hero-btns',
+    '.pain-card', '.risk-card', '.benefit-card', '.voice-card',
+    '.step', '.demerit-card', '.concept-card', '.concept-desc',
+    '.story-kicker', '.story-body', '.story-scene',
+    '.target-list li', '.area-tags', '.compare-wrap',
+    '.flow-step', '.profile-inner', '.stat-item', '.tag-row',
+    '.visual-band-inner h3', '.visual-band-inner p', '.visual-band-inner .btn-white',
+    '.contact-inner', '.faq-list details'
+  ];
+  const imgSelectors = [
+    'img[src="data/kousei.png"]', '.visual-band', '.profile-avatar'
+  ];
+
+  function tagReveal(selectorList, className) {
+    selectorList.forEach(sel => {
+      document.querySelectorAll(sel).forEach((el, i) => {
+        if (el.classList.contains('reveal') || el.classList.contains('reveal-img')) return;
+        if (el.closest('#about')) return; // 最初のセクションはアニメーションなしで即表示
+        el.classList.add(className);
+        el.style.setProperty('--reveal-delay', (Math.min(i % 6, 5) * 0.08) + 's');
+      });
+    });
+  }
+  tagReveal(textSelectors, 'reveal');
+  tagReveal(imgSelectors, 'reveal-img');
+
+  const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-img').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
