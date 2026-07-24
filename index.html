@@ -83,6 +83,8 @@
       white-space: nowrap;
       color: var(--brown); border-bottom: 2px solid var(--brown);
     }
+    .h-nav a.seeker-link { color: var(--green); }
+    .h-nav a.seeker-link:hover { border-bottom-color: var(--green); }
     .h-cta-line {
       display: inline-flex; align-items: center; gap: .4rem;
       background: #06C755; color: #fff;
@@ -356,6 +358,22 @@
     }
     .flow-step h4 { font-size: .85rem; font-weight: 700; color: var(--brown-dk); margin-bottom: .3rem; }
     .flow-step p { font-size: .78rem; color: var(--text-sub); }
+
+    /* ── FLOW CARDS（概要フロー：ティールカード） ── */
+    .flow-cards { max-width: 900px; margin: 2.5rem auto 3rem; display: flex; flex-direction: column; align-items: center; }
+    .flow-card-row { display: flex; align-items: stretch; justify-content: center; flex-wrap: nowrap; width: 100%; }
+    .fc { position: relative; flex: 1 1 0; max-width: 220px; background: var(--green); color: var(--white); border-radius: 18px; padding: 1.5rem 1.35rem; box-shadow: 0 10px 26px rgba(43,191,173,.20); }
+    .fc-step { display: block; font-size: .64rem; font-weight: 700; letter-spacing: .14em; color: rgba(255,255,255,.72); margin-bottom: .5rem; }
+    .fc-title { font-size: .98rem; font-weight: 700; color: var(--white); margin-bottom: .5rem; line-height: 1.45; }
+    .fc-desc { font-size: .74rem; color: rgba(255,255,255,.85); line-height: 1.7; }
+    .fc-arrow { flex: 0 0 auto; align-self: center; width: 0; height: 0; margin: 0 .5rem; border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 13px solid var(--green); }
+    .fc-badge { position: absolute; top: -16px; right: -12px; width: 60px; height: 60px; border-radius: 50%; background: var(--brown); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; line-height: 1.2; text-align: center; box-shadow: 0 6px 16px rgba(245,131,26,.35); border: 3px solid var(--green-bg); z-index: 2; }
+    @media (max-width: 720px) {
+      .flow-card-row { flex-direction: column; align-items: center; }
+      .fc { max-width: 420px; width: 100%; }
+      .fc-arrow { border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 13px solid var(--green); border-bottom: 0; margin: .7rem 0; }
+      .fc-badge { right: 10px; top: -18px; }
+    }
 
     /* ── CTA ── */
     .cta-section {
@@ -796,12 +814,13 @@
   <button class="h-ham" id="ham"><span></span><span></span><span></span></button>
   <a href="https://sottodesign0-hub.github.io/Tsumuie/" class="h-logo"><img src="data/logo-mark.png" alt="Tsumuie（ツムイエ）"></a>
   <ul class="h-nav">
+    <li><span class="owner-link">▶ 空き家オーナーの方へ</span></li>
+    <li><a href="https://sottodesign0-hub.github.io/Tsumuie/入居者ページ/" class="seeker-link">▶ 住まいを探している方へ</a></li>
     <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#properties">物件を探す</a></li>
     <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#lessee">住みたい人</a></li>
     <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#flow">仕組み</a></li>
     <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#faq">FAQ</a></li>
     <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#company">運営会社</a></li>
-    <li><span class="owner-link">▶ 空き家オーナーの方へ</span></li>
   </ul>
   <a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener" class="h-cta-line">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
@@ -809,12 +828,13 @@
   </a>
 </header>
 <div class="mob-menu" id="mobMenu">
-  <a href="https://sottodesign0-hub.github.io/Tsumuie/#properties">物件を探す</a>
-  <a href="https://sottodesign0-hub.github.io/Tsumuie/#lessee">住みたい人</a>
-  <a href="https://sottodesign0-hub.github.io/Tsumuie/#flow">仕組み</a>
-  <a href="https://sottodesign0-hub.github.io/Tsumuie/#faq">FAQ</a>
-  <a href="https://sottodesign0-hub.github.io/Tsumuie/#company">運営会社</a>
-  <a href="#" style="color:var(--brown);font-weight:700;">▶ 空き家オーナーの方へ</a>
+  <a href="#" style="color:var(--brown);font-weight:700;" onclick="closeMob()">▶ 空き家オーナーの方へ</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/入居者ページ/" style="color:var(--green);font-weight:700;" onclick="closeMob()">▶ 住まいを探している方へ</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#properties" onclick="closeMob()">物件を探す</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#lessee" onclick="closeMob()">住みたい人</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#flow" onclick="closeMob()">仕組み</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#faq" onclick="closeMob()">FAQ</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#company" onclick="closeMob()">運営会社</a>
 </div>
 
 <!-- ── ABOUT ── -->
@@ -1000,33 +1020,35 @@
     <h2 class="section-title">どうやって成り立つの？</h2>
     <p class="section-desc">2つの契約を同時に結ぶことで、<br>オーナー様も入居者も「見通しのある関係」を築きます。</p>
   </div>
-  <!-- 概要フロー -->
-  <div class="flow-mini" style="max-width:860px;margin:2.5rem auto 3rem;background:var(--white);border-radius:16px;border:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;">
-    <div style="text-align:center;flex:1;min-width:120px;">
-      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">1</div>
-      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">空き家を提供</div>
-      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">条件を事前に確定</div>
-    </div>
-    <div class="flow-mini-arrow" style="color:var(--green);font-size:1.4rem;font-weight:700;flex-shrink:0;">→</div>
-    <div style="text-align:center;flex:1;min-width:120px;">
-      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">2</div>
-      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">賃貸スタート</div>
-      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">家賃収入を得る</div>
-    </div>
-    <div class="flow-mini-arrow" style="color:var(--green);font-size:1.4rem;font-weight:700;flex-shrink:0;">→</div>
-    <div style="text-align:center;flex:1;min-width:120px;">
-      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">3</div>
-      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">積み立て継続</div>
-      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">10〜15年間</div>
-    </div>
-    <div class="flow-mini-arrow" style="color:var(--green);font-size:1.4rem;font-weight:700;flex-shrink:0;">→</div>
-    <div style="text-align:center;flex:1;min-width:120px;">
-      <div style="font-size:.75rem;color:var(--text-sub);margin-bottom:.3rem;">4</div>
-      <div style="font-weight:700;color:var(--brown-dk);font-size:.95rem;">入居者が取得</div>
-      <div style="font-size:.78rem;color:var(--text-sub);margin-top:.2rem;">売却先確定</div>
+  <!-- 概要フロー（ティールカード） -->
+  <div class="flow-cards">
+    <div class="flow-card-row">
+      <div class="fc">
+        <span class="fc-step">STEP 01</span>
+        <h4 class="fc-title">空き家を提供</h4>
+        <p class="fc-desc">賃貸条件を事前に確定し、活用をスタートします。</p>
+      </div>
+      <span class="fc-arrow" aria-hidden="true"></span>
+      <div class="fc">
+        <span class="fc-step">STEP 02</span>
+        <h4 class="fc-title">賃貸スタート</h4>
+        <p class="fc-desc">入居者との契約が成立し、毎月の家賃収入を得られます。</p>
+      </div>
+      <span class="fc-arrow" aria-hidden="true"></span>
+      <div class="fc">
+        <span class="fc-step">STEP 03</span>
+        <h4 class="fc-title">賃貸を継続</h4>
+        <p class="fc-desc">10〜15年間、入居者が住み継ぎながら取得へ近づきます。</p>
+      </div>
+      <span class="fc-arrow" aria-hidden="true"></span>
+      <div class="fc fc-last">
+        <span class="fc-badge">持家に</span>
+        <span class="fc-step">STEP 04</span>
+        <h4 class="fc-title">入居者が取得</h4>
+        <p class="fc-desc">契約満了で家は入居者のものへ。売却先が最初から決まっている安心感。</p>
+      </div>
     </div>
   </div>
-  <p class="scroll-hint">← 横にスクロールできます →</p>
 
   <div class="steps">
     <div class="step">
