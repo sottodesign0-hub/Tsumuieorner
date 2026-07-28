@@ -731,6 +731,25 @@
       }
       .visual-band::before { background-attachment: scroll !important; }
     }
+
+    /* ══ 冒頭：REALITY（鍵をかけたまま…）＋ STORY（その空き家…） ══ */
+    .own-reality {
+      background:
+        linear-gradient(rgba(28,26,23,.58), rgba(28,26,23,.58)),
+        url('data/haikei-8.jpg') center/cover fixed;
+      padding: 132px 7% 100px; text-align: center;
+    }
+    .own-reality-inner { max-width: 720px; margin: 0 auto; }
+    .own-reality-lead {
+      font-size: clamp(1.05rem, 2.6vw, 1.6rem);
+      color: #fff; font-weight: 500; line-height: 1.95; margin: 0;
+      text-shadow: 0 2px 22px rgba(0,0,0,.5);
+    }
+    .own-reality-lead em { font-style: normal; color: #ffb566; font-weight: 700; }
+    .own-reality-logo { height: 1em; width: auto; vertical-align: -.14em; margin: 0 .08em; }
+    @media (max-width: 768px) {
+      .own-reality { background-attachment: scroll; padding-top: 110px; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -837,8 +856,15 @@
   <a href="https://sottodesign0-hub.github.io/Tsumuie/#company" onclick="closeMob()">運営会社</a>
 </div>
 
+<!-- ── 冒頭 REALITY（鍵をかけたまま…） ── -->
+<section class="own-reality">
+  <div class="own-reality-inner">
+    <p class="own-reality-lead">鍵をかけたまま、時間だけが過ぎていく実家。<br>「売るしかないのかな」「でも、なんだか寂しいな」<br>——その気持ち、<em><img src="data/IMG_6493-tight.png" alt="Tsumuie" class="own-reality-logo">が一緒に向き合います。</em></p>
+  </div>
+</section>
+
 <!-- ── ABOUT ── -->
-<section id="about" style="padding-top:140px;">
+<section id="about" style="padding-top:80px;">
   <div class="about-inner" style="grid-template-columns:1fr;">
     <div class="about-text center" style="max-width:680px;margin:0 auto;">
       <div class="section-label" style="display:flex;align-items:center;justify-content:center;gap:.4rem;">
