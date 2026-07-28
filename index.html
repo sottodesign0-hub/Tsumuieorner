@@ -732,12 +732,15 @@
       .visual-band::before { background-attachment: scroll !important; }
     }
 
-    /* ══ 冒頭：REALITY（鍵をかけたまま…）＋ STORY（その空き家…） ══ */
+    /* ══ 冒頭：REALITY（鍵をかけたまま…・全画面）＋ STORY（その空き家…） ══ */
     .own-reality {
+      position: relative;
+      min-height: 100vh; min-height: 100svh;
+      display: flex; align-items: center; justify-content: center;
       background:
-        linear-gradient(rgba(28,26,23,.58), rgba(28,26,23,.58)),
+        linear-gradient(180deg, rgba(28,26,23,.50) 0%, rgba(28,26,23,.32) 42%, rgba(28,26,23,.62) 100%),
         url('data/haikei-8.jpg') center/cover fixed;
-      padding: 132px 7% 100px; text-align: center;
+      padding: 90px 7% 12vh; text-align: center;
     }
     .own-reality-inner { max-width: 720px; margin: 0 auto; }
     .own-reality-lead {
@@ -747,9 +750,47 @@
     }
     .own-reality-lead em { font-style: normal; color: #ffb566; font-weight: 700; }
     .own-reality-logo { height: 1em; width: auto; vertical-align: -.14em; margin: 0 .08em; }
-    @media (max-width: 768px) {
-      .own-reality { background-attachment: scroll; padding-top: 110px; }
+    .own-scroll {
+      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      color: #fff; font-size: .62rem; letter-spacing: .28em; text-transform: uppercase; opacity: .92;
     }
+    .own-scroll::after {
+      content: ''; width: 1px; height: 44px; background: rgba(255,255,255,.75);
+      transform-origin: top; animation: ownScroll 2.1s ease-in-out infinite;
+    }
+    @keyframes ownScroll {
+      0%, 100% { transform: scaleY(.35); opacity: .35; }
+      50%      { transform: scaleY(1);   opacity: 1;   }
+    }
+
+    .own-story {
+      background:
+        linear-gradient(rgba(250,249,247,.85), rgba(250,249,247,.93)),
+        url('data/haikei-1.jpg') center/cover fixed;
+      padding: 72px 5% 88px; text-align: center;
+    }
+    .own-story-inner { max-width: 640px; margin: 0 auto; }
+    .own-story-chapter {
+      display: inline-block;
+      font-size: .68rem; font-weight: 700; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--brown);
+      background: rgba(245,131,26,.1);
+      padding: .4rem 1.1rem; border-radius: 999px; margin-bottom: 1.75rem;
+    }
+    .own-story-title {
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      font-weight: 600; line-height: 1.65; color: var(--text); margin-bottom: 2rem;
+    }
+    .own-story-body p {
+      font-size: clamp(.85rem, 3.6vw, .95rem); color: var(--text-sub);
+      line-height: 2; margin: 0;
+    }
+    .own-story-body strong { color: var(--text); }
+    @media (max-width: 768px) {
+      .own-reality, .own-story { background-attachment: scroll; }
+    }
+    @media (prefers-reduced-motion: reduce) { .own-scroll::after { animation: none; } }
   </style>
   <script type="application/ld+json">
   {
@@ -856,10 +897,22 @@
   <a href="https://sottodesign0-hub.github.io/Tsumuie/#company" onclick="closeMob()">運営会社</a>
 </div>
 
-<!-- ── 冒頭 REALITY（鍵をかけたまま…） ── -->
+<!-- ── 冒頭 REALITY（鍵をかけたまま…・全画面） ── -->
 <section class="own-reality">
   <div class="own-reality-inner">
     <p class="own-reality-lead">鍵をかけたまま、時間だけが過ぎていく実家。<br>「売るしかないのかな」「でも、なんだか寂しいな」<br>——その気持ち、<em><img src="data/IMG_6493-tight.png" alt="Tsumuie" class="own-reality-logo">が一緒に向き合います。</em></p>
+  </div>
+  <span class="own-scroll" aria-hidden="true"><span>Scroll</span></span>
+</section>
+
+<!-- ── 冒頭 STORY（その空き家…） ── -->
+<section class="own-story">
+  <div class="own-story-inner">
+    <p class="own-story-chapter">空き家に、続きの物語を</p>
+    <h2 class="own-story-title">その空き家、<br>実はまだ終わっていません。</h2>
+    <div class="own-story-body">
+      <p>次の住人と一緒に、<strong>新しい物語を紡いでいく場所</strong>に変わることができます。<br>それがTsumuie（つむいえ）です。</p>
+    </div>
   </div>
 </section>
 
