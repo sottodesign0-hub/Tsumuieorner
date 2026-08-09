@@ -226,7 +226,7 @@
     }
     .about-img img { width: 100%; display: block; }
     .about-text .section-title { margin-bottom: .8rem; }
-    .about-text p { color: var(--text-sub); margin-bottom: 1rem; }
+    .about-text p { color: var(--text-sub); margin-bottom: 1rem; text-wrap: balance; }
     .tag-row { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.5rem; justify-content: center; }
     .tag {
       background: var(--green-bg); color: var(--green);
@@ -897,25 +897,6 @@
   <a href="https://sottodesign0-hub.github.io/Tsumuie/#company" onclick="closeMob()">運営会社</a>
 </div>
 
-<!-- ── 冒頭 REALITY（鍵をかけたまま…・全画面） ── -->
-<section class="own-reality">
-  <div class="own-reality-inner">
-    <p class="own-reality-lead">鍵をかけたまま、時間だけが過ぎていく実家。<br>「売るしかないのかな」「でも、なんだか寂しいな」<br>——その気持ち、<em><img src="data/IMG_6493-tight.png" alt="Tsumuie" class="own-reality-logo">が一緒に向き合います。</em></p>
-  </div>
-  <span class="own-scroll" aria-hidden="true"><span>Scroll</span></span>
-</section>
-
-<!-- ── 冒頭 STORY（その空き家…） ── -->
-<section class="own-story">
-  <div class="own-story-inner">
-    <p class="own-story-chapter">空き家に、続きの物語を</p>
-    <h2 class="own-story-title">その空き家、<br>実はまだ終わっていません。</h2>
-    <div class="own-story-body">
-      <p>次の住人と一緒に、<strong>新しい物語を紡いでいく場所</strong>に変わることができます。<br>それがTsumuie（つむいえ）です。</p>
-    </div>
-  </div>
-</section>
-
 <!-- ── ABOUT ── -->
 <section id="about" style="padding-top:80px;">
   <div class="about-inner" style="grid-template-columns:1fr;">
@@ -926,9 +907,9 @@
       </div>
       <h2 class="section-title">賃貸×将来取得の<br>新しい空き家活用</h2>
       <img src="data/kousei.png" alt="Tsumuieサービス構成図" style="width:100%;max-width:640px;margin:1.5rem auto 1.5rem;display:block;">
-      <p><span class="t-logo"><span class="t1">Tsumu</span><span class="t2">ie</span></span>は、空き家オーナー様と<br class="br-mobile">住まいを真剣に探す挑戦者を<br>つなぐハイブリッドサービスです。</p>
-      <p>入居者はまず賃貸としてスタートし、10〜15年後に事前に合意した条件でお家を取得します。</p>
-      <p>管理・マッチング・契約設計まで一貫してサポートし、遠方のオーナー様にもオンラインで丁寧に対応します。</p>
+      <p><span class="t-logo"><span class="t1">Tsumu</span><span class="t2">ie</span></span>は、<br>空き家オーナー様と住まいを真剣に探す挑戦者をつなぐハイブリッドサービス。</p>
+      <p>入居者はまず賃貸としてスタートし、<br>10〜15年後に事前に合意した条件でお家を取得。</p>
+      <p>管理・マッチング・契約設計まで一貫してサポートし、<br>遠方のオーナー様にもオンラインで丁寧に対応します。</p>
       <div class="tag-row">
         <span class="tag">関西エリア対応</span>
         <span class="tag">オンライン相談OK</span>
@@ -937,8 +918,16 @@
   </div>
 </section>
 
+<!-- ── 冒頭 REALITY（鍵をかけたまま…・全画面） ── -->
+<section class="own-reality">
+  <div class="own-reality-inner">
+    <p class="own-reality-lead">鍵をかけたまま、時間だけが過ぎていく実家。<br>「売るしかないのかな」「でも、なんだか寂しいな」<br>——その気持ち、<em><img src="data/IMG_6493-tight.png" alt="Tsumuie" class="own-reality-logo">が一緒に向き合います。</em></p>
+  </div>
+  <span class="own-scroll" aria-hidden="true"><span>Scroll</span></span>
+</section>
+
 <!-- ── CONCEPT ── -->
-<section class="concept">
+<section class="concept" style="padding-bottom:28px;">
   <div class="concept-inner">
     <p class="concept-lead" style="display:flex;align-items:center;justify-content:center;gap:.4rem;">
       <img src="data/IMG_6493.PNG" alt="Tsumuie" style="height:1.3rem;width:auto;vertical-align:middle;">
@@ -955,13 +944,13 @@
         <p>家を持ちたい家族のマイホームとして再活用し、次の世代へとつなぐ選択に変わります。家の記憶も、一緒に受け継がれます。</p>
       </div>
     </div>
-    <p class="concept-desc"><img src="data/IMG_6493-tight.png" alt="Tsumuie" style="height:.85em;width:auto;vertical-align:baseline;">を使えば、すぐに売却するのではなく、<br>まず「活かす」という選択ができます。<br>そして、家を持ちたい家族のマイホームとして<br>再活用し、「つなぐ」選択に変わります。</p>
+    <p class="concept-desc"><img src="data/IMG_6493-tight.png" alt="Tsumuie" style="height:.85em;width:auto;vertical-align:baseline;">を使えば、すぐに売却するのではなく、<br>まず「活かす」という選択ができます。<br>そして、家を持ちたい家族のマイホームとして再活用し、<br>「つなぐ」選択に変わります。</p>
   </div>
 </section>
 
 <!-- ── AREA STRIP ── -->
-<div style="background:var(--brown-dk);color:rgba(255,255,255,.9);text-align:center;padding:.75rem 5%;font-size:.85rem;letter-spacing:.04em;">
-  📍 対応エリア：<strong style="color:#fff;">大阪・神戸・京都・<br>奈良・滋賀・和歌山</strong>など関西全域で<br>空家活用・空き家の相続相談に対応。<br>遠方にお住まいのオーナー様も<br><strong style="color:#fff;">オンラインで完結</strong>できます。
+<div style="background:var(--brown-dk);color:rgba(255,255,255,.9);text-align:center;padding:.75rem 5% 2.5rem;font-size:.85rem;letter-spacing:.04em;">
+  📍 対応エリア：関西全域<br><br>遠方にお住まいのオーナー様も<br><strong style="color:#fff;">オンラインで完結</strong>できます。
 </div>
 
 <!-- ── HERO CTA ── -->
