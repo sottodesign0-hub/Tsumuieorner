@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜株式会社SOTTO（Tsumuie）</title>
+  <meta name="description" content="株式会社SOTTO（賃貸で育てる家 Tsumuie）へのお問い合わせフォームです。空き家の活用・売却相談、サービスに関するご質問など、お気軽にお問い合わせください。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sottodesign0-hub.github.io/Tsumuieorner/contact/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../data/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../data/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../data/apple-touch-icon.png">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --font-sans: system-ui, -apple-system, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif;
+      --green:     #2bbfad;
+      --green-lt:  #4dd0c0;
+      --green-bg:  #edfaf8;
+      --beige:     #f5f0e8;
+      --brown:     #f5831a;
+      --brown-dk:  #1c1a17;
+      --text:      #1c1a17;
+      --text-sub:  #5c5850;
+      --white:     #ffffff;
+      --border:    #e2ddd6;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER（Tsumuieプラットフォームと共通） ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      height: 58px; display: flex; align-items: center;
+      padding: 0 4%; gap: 2rem;
+    }
+    .h-logo { display: flex; align-items: center; text-decoration: none; color: var(--brown-dk); flex-shrink: 0; }
+    .h-logo img { height: 34px; width: auto; display: block; }
+    .h-nav { display: flex; gap: 0; list-style: none; flex: 1; }
+    .h-nav a {
+      display: block; padding: 0 .95rem; height: 58px;
+      line-height: 58px; font-size: .8rem; font-weight: 500;
+      text-decoration: none; color: var(--text-sub);
+      border-bottom: 2px solid transparent;
+      transition: color .2s, border-color .2s; white-space: nowrap;
+    }
+    .h-nav a:hover { color: var(--brown-dk); }
+    .h-nav a.owner-link { color: var(--brown); }
+    .h-nav a.owner-link:hover { border-bottom: 2px solid var(--brown); }
+    .h-nav a.seeker-link { color: var(--green); }
+    .h-nav a.seeker-link:hover { border-bottom-color: var(--green); }
+    .h-cta-line {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: #06C755; color: #fff;
+      font-size: .78rem; font-weight: 700;
+      padding: .38rem .95rem; border-radius: 999px;
+      text-decoration: none; flex-shrink: 0; transition: opacity .2s;
+    }
+    .h-cta-line:hover { opacity: .85; }
+    .h-ham {
+      display: flex; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px; flex-shrink: 0;
+    }
+    .h-ham span { display: block; width: 22px; height: 1.5px; background: var(--brown-dk); transition: all .3s; }
+    .h-ham.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .h-ham.open span:nth-child(2) { opacity: 0; }
+    .h-ham.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mob-menu {
+      display: none; position: fixed; top: 58px; left: 0; right: 0; z-index: 190;
+      background: var(--white); border-bottom: 1px solid var(--border);
+      padding: 1rem 4%; flex-direction: column;
+    }
+    .mob-menu.open { display: flex; }
+    .mob-menu a { padding: .85rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--brown-dk); font-size: .92rem; }
+    .mob-menu a:last-child { border-bottom: none; }
+    @media (max-width: 768px) { .h-nav { display: none; } }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--green-bg), var(--beige));
+      padding: 8rem 5% 3rem;
+      text-align: center;
+    }
+    .page-hero .idx { font-size: .7rem; letter-spacing: .28em; text-transform: uppercase; color: var(--green); font-weight: 700; }
+    .page-hero h1 { font-size: 1.9rem; color: var(--brown-dk); margin: .6rem 0 .8rem; line-height: 1.4; }
+    .page-hero p { color: var(--text-sub); font-size: .95rem; max-width: 640px; margin: 0 auto; }
+    .lead .line { display: block; margin-bottom: .3rem; }
+    .lead .line:last-child { margin-bottom: 0; }
+    .lead .line > span { display: inline-block; }
+    @media (max-width: 600px) { .page-hero h1 { font-size: 1.45rem; } }
+
+    /* ── CONTACT CHANNELS ── */
+    .channels { max-width: 760px; margin: 2.2rem auto 0; padding: 0 5%; }
+    .channels-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .channel {
+      flex: 1 1 200px; background: var(--white); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.1rem 1.1rem; text-align: center;
+    }
+    .channel .ic { font-size: 1.4rem; margin-bottom: .3rem; }
+    .channel h3 { font-size: .9rem; color: var(--brown-dk); margin-bottom: .2rem; }
+    .channel p { font-size: .82rem; color: var(--text-sub); line-height: 1.6; }
+    .channel a { color: var(--green); text-decoration: none; font-weight: 700; }
+
+    /* ── FORM ── */
+    .wrap { max-width: 680px; margin: 3rem auto 5rem; padding: 0 5%; }
+    .card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 20px; padding: 2.5rem;
+    }
+    @media (max-width: 600px) { .card { padding: 1.5rem; } }
+    .form-group { margin-bottom: 1.35rem; }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 560px) { .row2 { grid-template-columns: 1fr; gap: 0; } }
+    label { display: block; font-size: .85rem; font-weight: 500; color: var(--brown-dk); margin-bottom: .4rem; }
+    .req { color: #c0392b; margin-left: 4px; font-size: .8rem; }
+    .opt { color: var(--text-sub); margin-left: 4px; font-size: .72rem; font-weight: 400; }
+    input, select, textarea {
+      width: 100%; padding: .75rem 1rem;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      font-family: var(--font-sans); font-size: .9rem; color: var(--text);
+      background: var(--white); transition: border-color .2s; appearance: none;
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235c5850' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.4rem;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--green); }
+    textarea { resize: vertical; min-height: 140px; }
+    .hint { font-size: .74rem; color: var(--text-sub); margin-top: .35rem; }
+    .consent {
+      display: flex; align-items: flex-start; gap: .75rem;
+      font-size: .82rem; color: var(--text-sub); line-height: 1.6;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 12px; padding: 1rem 1.1rem; cursor: pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .consent:has(input:checked) { border-color: var(--green); background: var(--green-bg); }
+    .consent input {
+      appearance: none; -webkit-appearance: none;
+      width: 24px; height: 24px; flex-shrink: 0; margin: 0;
+      border: 2px solid var(--border); border-radius: 6px;
+      background: var(--white); cursor: pointer; position: relative;
+      transition: background .15s, border-color .15s;
+    }
+    .consent input:checked { background: var(--green); border-color: var(--green); }
+    .consent input:checked::after {
+      content: ''; position: absolute; left: 7px; top: 3px;
+      width: 6px; height: 11px; border: solid #fff;
+      border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+    }
+    .consent input:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+    .consent .consent-txt { padding-top: .1rem; }
+    .consent a { color: var(--green); }
+    .form-submit {
+      width: 100%; padding: 1rem; background: var(--green); color: var(--white);
+      border: none; border-radius: 32px; font-family: var(--font-sans);
+      font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 1rem; transition: background .2s;
+    }
+    .form-submit:hover { background: var(--green-lt); }
+    .form-submit:disabled { opacity: .6; cursor: default; }
+    .form-note { font-size: .78rem; color: var(--text-sub); text-align: center; margin-top: 1rem; }
+    .hidden-hp { position: absolute; left: -9999px; }
+
+    /* messages */
+    .msg { border-radius: 12px; padding: 1rem 1.2rem; font-size: .88rem; margin-top: 1rem; display: none; }
+    .msg.err { background: #fdecea; color: #c0392b; }
+    .success-box { display: none; text-align: center; padding: 1rem 0; }
+    .success-box .chk {
+      width: 64px; height: 64px; border-radius: 50%; background: var(--green);
+      color: #fff; font-size: 2rem; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+    }
+    .success-box h2 { font-size: 1.4rem; color: var(--brown-dk); margin-bottom: .6rem; }
+    .success-box p { color: var(--text-sub); font-size: .9rem; }
+    .success-box .line-btn {
+      display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.5rem;
+      background: #06C755; color: #fff; padding: .85rem 1.8rem; border-radius: 999px;
+      text-decoration: none; font-weight: 700; font-size: .9rem;
+    }
+
+    /* ── FOOTER ── */
+    footer { background: var(--brown-dk); color: rgba(255,255,255,.7); padding: 3rem 5% 2rem; }
+    .footer-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
+    .footer-brand img { height: 30px; margin-bottom: .8rem; }
+    .footer-brand p { font-size: .8rem; line-height: 1.7; }
+    .footer-brand small { opacity: .6; }
+    .footer-links { display: flex; flex-direction: column; gap: .6rem; }
+    .footer-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: .85rem; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { text-align: center; font-size: .72rem; opacity: .5; margin-top: 2.5rem; }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <button class="h-ham" id="ham"><span></span><span></span><span></span></button>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/" class="h-logo"><img src="../data/logo-mark.png" alt="Tsumuie（ツムイエ）"></a>
+  <ul class="h-nav">
+    <li><a href="https://sottodesign0-hub.github.io/Tsumuieorner/" class="owner-link">▶ 空き家オーナーの方へ</a></li>
+    <li><a href="https://sottodesign0-hub.github.io/Tsumuie/入居者ページ/" class="seeker-link">▶ 住まいを探している方へ</a></li>
+    <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#properties">物件を探す</a></li>
+    <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#flow">仕組み</a></li>
+    <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#faq">FAQ</a></li>
+    <li><a href="https://sottodesign0-hub.github.io/Tsumuie/#company">運営会社</a></li>
+  </ul>
+  <a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener" class="h-cta-line">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINE相談
+  </a>
+</header>
+<div class="mob-menu" id="mobMenu">
+  <a href="https://sottodesign0-hub.github.io/Tsumuieorner/" onclick="closeMob()" style="color:var(--brown);font-weight:700;">▶ 空き家オーナーの方へ</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/入居者ページ/" onclick="closeMob()" style="color:var(--green);font-weight:700;">▶ 住まいを探している方へ</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#properties" onclick="closeMob()">物件を探す</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#flow" onclick="closeMob()">仕組み</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#faq" onclick="closeMob()">FAQ</a>
+  <a href="https://sottodesign0-hub.github.io/Tsumuie/#company" onclick="closeMob()">運営会社</a>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <span class="idx">CONTACT</span>
+  <h1>お問い合わせ</h1>
+  <p class="lead">
+    <span class="line"><span>空き家の活用・売却のご相談、</span><span>サービスに関するご質問など、</span><span>お気軽にお問い合わせください。</span></span>
+    <span class="line"><span>ご入力いただいた内容をもとに、</span><span>株式会社SOTTO（Tsumuie）担当より</span><span>数日以内にご連絡いたします。</span></span>
+  </p>
+</section>
+
+<!-- ══ 他の連絡手段 ══ -->
+<div class="channels">
+  <div class="channels-row">
+    <div class="channel"><div class="ic">💬</div><h3>LINEで相談</h3><p><a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener">公式LINE</a>からもOK</p></div>
+    <div class="channel"><div class="ic">✉️</div><h3>メール</h3><p><a href="mailto:sottodesign0@gmail.com">sottodesign0@gmail.com</a></p></div>
+    <div class="channel"><div class="ic">☎️</div><h3>お電話</h3><p><a href="tel:078-600-0548">078-600-0548</a></p></div>
+  </div>
+</div>
+
+<!-- ══ FORM ══ -->
+<div class="wrap">
+  <div class="card">
+
+    <!-- ↓↓↓ 送信先は Formspree。別フォームで受信を分けたい場合はこの form ID を差し替えてください ↓↓↓ -->
+    <form id="contactForm" action="https://formspree.io/f/xbgjgdve" method="POST">
+
+      <!-- 件名（受信メールの見出し）と迷惑bot対策 -->
+      <input type="hidden" name="_subject" value="【SOTTO】お問い合わせがありました">
+      <input type="text" name="_gotcha" class="hidden-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-group">
+        <label for="name">お名前<span class="req">必須</span></label>
+        <input type="text" id="name" name="お名前" required autocomplete="name">
+      </div>
+
+      <div class="row2">
+        <div class="form-group">
+          <label for="email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="email" name="メールアドレス" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="tel">電話番号<span class="opt">任意</span></label>
+          <input type="tel" id="tel" name="電話番号" autocomplete="tel" inputmode="tel">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="reply_pref">ご希望の返信方法<span class="opt">任意</span></label>
+        <select id="reply_pref" name="希望の返信方法">
+          <option value="">選択してください</option>
+          <option>メール</option>
+          <option>電話</option>
+          <option>LINE</option>
+          <option>どれでも可</option>
+        </select>
+        <p class="hint">「電話」「LINE」をご希望の場合は、電話番号のご記入をおすすめします。</p>
+      </div>
+
+      <div class="form-group">
+        <label for="message">お問い合わせ内容<span class="req">必須</span></label>
+        <textarea id="message" name="お問い合わせ内容" required placeholder="ご相談・ご質問の内容を自由にご記入ください。"></textarea>
+      </div>
+
+      <!-- ── 同意 ── -->
+      <div class="form-group">
+        <label class="consent">
+          <input type="checkbox" id="agree" name="個人情報の取扱いに同意" value="同意する" required>
+          <span class="consent-txt">ご入力いただいた個人情報は、お問い合わせへのご対応・ご連絡のみに使用し、ご本人の同意なく第三者へ提供することはありません。上記に同意します。<span class="req">必須</span></span>
+        </label>
+      </div>
+
+      <button type="submit" class="form-submit" id="submitBtn">この内容で送信する</button>
+      <p class="form-note">送信後、担当より数日以内にご連絡いたします。</p>
+      <div class="msg err" id="errMsg">送信に失敗しました。お手数ですが時間をおいて再度お試しいただくか、公式LINE・メールからご連絡ください。</div>
+    </form>
+
+    <!-- 送信成功時に表示 -->
+    <div class="success-box" id="successBox">
+      <div class="chk">✓</div>
+      <h2>お問い合わせありがとうございます</h2>
+      <p>内容を受け付けました。<br>担当より数日以内にご連絡いたします。<br>お急ぎの場合は、公式LINE・お電話でもご連絡いただけます。</p>
+      <a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener" class="line-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        公式LINEで相談する
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer id="company">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../data/IMG_6493.PNG" alt="Tsumuie">
+      <p>空き家オーナーと住まいを必要とする挑戦者をつなぐ、<br>賃貸×将来取得のハイブリッドサービス。<br><small>運営：株式会社SOTTO ／ 代表 増田 早紀（一級建築士・宅地建物取引士）</small></p>
+    </div>
+    <nav class="footer-links">
+      <a href="https://sottodesign0-hub.github.io/Tsumuieorner/">オーナーの方へ</a>
+      <a href="https://sottodesign0-hub.github.io/Tsumuieorner/#benefits">オーナーのメリット</a>
+      <a href="https://sottodesign0-hub.github.io/Tsumuieorner/#flow">ご利用の流れ</a>
+      <a href="https://sottodesign0-hub.github.io/Tsumuieorner/#faq">よくある質問</a>
+      <a href="https://lin.ee/pZ7B2cG" target="_blank" rel="noopener">LINEで相談</a>
+    </nav>
+  </div>
+  <p class="footer-copy">© 2025 Tsumuie. All rights reserved.</p>
+</footer>
+
+<script>
+  // Hamburger menu
+  const ham = document.getElementById('ham');
+  const mobMenu = document.getElementById('mobMenu');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    mobMenu.classList.toggle('open');
+  });
+  function closeMob() {
+    ham.classList.remove('open');
+    mobMenu.classList.remove('open');
+  }
+
+  // Formspree AJAX 送信（ページ内で完了表示）
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const errMsg = document.getElementById('errMsg');
+  const successBox = document.getElementById('successBox');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errMsg.style.display = 'none';
+
+    // Formspree 未設定チェック（form ID を入れ忘れた場合の保険）
+    if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+      errMsg.textContent = '【設定未完了】Formspree の form ID が未設定です。ページ管理者にお知らせください。';
+      errMsg.style.display = 'block';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送信中…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        throw new Error('bad status');
+      }
+    } catch (err) {
+      errMsg.textContent = '送信に失敗しました。お手数ですが時間をおいて再度お試しいただくか、公式LINE・メールからご連絡ください。';
+      errMsg.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'この内容で送信する';
+    }
+  });
+</script>
+
+</body>
+</html>
